@@ -650,6 +650,10 @@ video {
   min-width: 500px;
 }
 
+.min-w-\[360px\] {
+  min-width: 360px;
+}
+
 .max-w-\[30\%\] {
   max-width: 30%;
 }
@@ -700,14 +704,6 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-clip {
-  overflow: clip;
-}
-
-.overflow-scroll {
-  overflow: scroll;
 }
 
 .border-b {

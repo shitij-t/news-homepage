@@ -41,7 +41,7 @@
         <li class="hover:text-Softorange hover:cursor-pointer">Categories</li>
       </ul>
     </div>
-    <main class="md:p-20 p-8 min-w-[500px]">
+    <main class="md:p-20 p-8 min-w-[360px]">
       <header class="pb-4 flex justify-between items-center">
         <img src="./assets/images/logo.svg" alt="" />
         <nav class="lg:block hidden">
@@ -182,14 +182,14 @@
     const body = document.getElementById("body");
 
     function close() {
-      body.classList.remove("overflow-scroll");
+      body.classList.remove("overflow-hidden");
       burgermenu.classList.add("hidden");
       cover.classList.add("hideit");
       cover.classList.remove("covering");
     }
 
     function open() {
-      body.classList.add("overflow-scroll");
+      body.classList.add("overflow-hidden");
       burgermenu.classList.remove("hidden");
       cover.classList.remove("hideit");
       cover.classList.add("covering");

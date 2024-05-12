@@ -566,9 +566,7 @@ video {
 
 .covering{
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   height: 100vh;
   width: 100%;
   z-index: 40;
@@ -583,6 +581,10 @@ video {
   display: none;
   height: 0px;
   width: 0px;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .absolute {
@@ -852,34 +854,6 @@ video {
 .text-Verydarkblue {
   --tw-text-opacity: 1;
   color: hsl(240 100% 5% / var(--tw-text-opacity));
-}
-
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.delay-150 {
-  transition-delay: 150ms;
-}
-
-.ease-linear {
-  transition-timing-function: linear;
 }
 
 .hover\:cursor-pointer:hover {

@@ -182,14 +182,14 @@
     const body = document.getElementById("body");
 
     function close() {
-      body.classList.remove("overflow-hidden");
+      body.classList.remove("overflow-scroll");
       burgermenu.classList.add("hidden");
       cover.classList.add("hideit");
       cover.classList.remove("covering");
     }
 
     function open() {
-      body.classList.add("overflow-hidden");
+      body.classList.add("overflow-scroll");
       burgermenu.classList.remove("hidden");
       cover.classList.remove("hideit");
       cover.classList.add("covering");

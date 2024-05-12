@@ -702,6 +702,14 @@ video {
   overflow: hidden;
 }
 
+.overflow-clip {
+  overflow: clip;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }

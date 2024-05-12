@@ -21,16 +21,17 @@
     />
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="font-Inter">
+  <body id="body" class="font-Inter">
+    <div id="cover" class="hideit"></div>
     <div
-      class="h-screen absolute left-[60%] w-full pt-14 bg-Softorange z-50"
+      class="h-screen absolute left-[60%] w-full pt-14 bg-Offwhite pl-6 z-50 hidden"
       id="burgermenu"
     >
       <img
         id="cross"
         src="./assets/images/icon-menu-close.svg"
         alt="close"
-        class="w-6"
+        class="w-6 cursor-pointer"
       />
       <ul class="flex flex-col justify-center gap-6 pt-12 text-Darkgrayishblue">
         <li class="hover:text-Softorange hover:cursor-pointer">Home</li>
@@ -56,8 +57,13 @@
             </li>
           </ul>
         </nav>
-        <nav>
-          <img src="./assets/images/icon-menu.svg" alt="menu" id="menu" />
+        <nav class="lg:hidden mr-4">
+          <img
+            class="cursor-pointer"
+            src="./assets/images/icon-menu.svg"
+            alt="menu"
+            id="menu"
+          />
         </nav>
       </header>
       <div class="flex lg:flex-row flex-col mt-10">
@@ -172,5 +178,25 @@
     const menu = document.getElementById("menu");
     const burgermenu = document.getElementById("burgermenu");
     const cross = document.getElementById("cross");
+    const cover = document.getElementById("cover");
+    const body = document.getElementById("body");
+
+    function close() {
+      body.classList.remove("overflow-hidden");
+      burgermenu.classList.add("hidden");
+      cover.classList.add("hideit");
+      cover.classList.remove("covering");
+    }
+
+    function open() {
+      body.classList.add("overflow-hidden");
+      burgermenu.classList.remove("hidden");
+      cover.classList.remove("hideit");
+      cover.classList.add("covering");
+    }
+
+    cross.addEventListener("click", () => close());
+
+    menu.addEventListener("click", () => open());
   </script>
 </html>
